@@ -1,0 +1,23 @@
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login
+    body 
+        div.outer-box
+            div.inner-box
+                header.signup-text
+                    h1 Login
+                main.signup-body
+                    form(action="/user", method = "post")  
+                        p
+                            label(for="email") Your Email: 
+                            input(type="text" placeholder = "xyx@gmail.com" name="email" id = "email") 
+                        p
+                            label(for="password") Your Password: 
+                            input(type="text" placeholder = "at least 8 characters" name="password" id="password") 
+                        p
+                            button(type="submit") Login
+        div.circle.c1
+        div.circle.c2

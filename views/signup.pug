@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title SignUp
+        style 
+            include ../static/signup.css
+    body 
+        div.outer-box
+            div.inner-box
+                header.signup-text
+                    h1 Signup
+                    p It just take 30 second
+                main.signup-body
+                    form(action="/user", method = "post") 
+                        p
+                            label(for="fullname") Full Name: 
+                            input(type="text" placeholder = "Enter full name" name="name" id="full-name" required) 
+                        p
+                            label(for="email") Your Email: 
+                            input(type="text" placeholder = "xyx@gmail.com" name="email" id = "email" required) 
+                        p
+                            label(for="password") Your Password: 
+                            input(type="password" placeholder = "at least 8 characters" name="password" required id="password") 
+                        p
+                            button(type="submit") Signup
+        div.circle.c1
+        div.circle.c2
+        div.circle.c3

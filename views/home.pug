@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        style 
+            include ../static/home.css
+    body
+        div.container 
+            div.form-content-container
+                h1 URL Shortner 
+                div.short-url-box
+                    if (locals.id) 
+                        span 
+                          b  URL Generated:
+                        p http://localhost/url/#{id}
+                form(action="/url" method="post") 
+                    div.url-field
+                        label(for="Original-URL") Enter Your Original URL
+                        input(type="text" placeholder = "https://example.com" id="Original-URL" name="url")
+                    button(type="submit") Generate
+            div.circle.c1
+            div.circle.c2   
+            div.circle.c3   
+            div.circle.c4   
+            if(locals.name)
+                h3 #{name}
+             
+        
